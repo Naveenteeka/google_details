@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="131438060639-6qc8jevsav1de0ksrh45a7j7up9ficnp.apps.googleusercontent.com">
+    
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+
+
+</head>
+
+<style>
+  .data {
+    display: none;
+}
+
+
+    .bg-image-vertical {
+        position: relative;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: auto 100%;
+      }
+      
+      @media (min-width: 1025px) {
+        .h-custom-2 {
+          height: 100%;
+        }
+      }
+
+      #button_twitter
+      {
+        background-color: rgb(29,161,242);
+      }
+</style>
+<body>
+    
+    <section class="vh-100">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 text-black">
+      
+              <div class="px-5 ms-xl-4">
+                <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+             
+              </div>
+      
+              <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+      
+                <form style="width: 23rem;">
+      
+                  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+      
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form2Example18" class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example18">Email address</label>
+                  </div>
+      
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form2Example28" class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example28">Password</label>
+                  </div>
+      
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                  </div>
+      
+                  <p class="small mb-3 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+
+                  <h6 class="text-center"> OR </h6>
+
+                  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                  
+                  <div class="data">
+                    <p>Name</p>
+                    <p id="name"></p>
+                    <p>Image</p>
+                    <img id="image" class="rounded-circle" width="100" height="100" />
+                    <p>Email</p>
+                    <p id="email"></p>
+
+                  
+
+                    <p>If you are not redirected in five seconds, <a href="https://www.bitdegree.org/">click here</a>.</p>
+
+                    <button type="button" class="btn btn-danger" onclick="signOut();">Sign Out</button>
+                </div>
+
+
+
+                  <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+      
+                </form>
+      
+              </div>
+      
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+
+        function onSignIn(googleUser) {
+
+            window.location.href = 'https://wizardly-goldwasser-cdf402.netlify.app';
+          var profile = googleUser.getBasicProfile();
+          $("#name").text(profile.getName());
+          $("#email").text(profile.getEmail());
+          $("#image").attr('src', profile.getImageUrl());
+          $(".data").css("display", "block");
+          $(".g-signin2").css("display", "none");
+
+          
+      }
+      
+      
+      
+    
+    </script>
+      </script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
