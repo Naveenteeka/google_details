@@ -115,7 +115,6 @@
 
         function onSignIn(googleUser) {
 
-            window.location.href = 'https://wizardly-goldwasser-cdf402.netlify.app';
           var profile = googleUser.getBasicProfile();
           $("#name").text(profile.getName());
           $("#email").text(profile.getEmail());
