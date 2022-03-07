@@ -14,7 +14,7 @@
 "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	
 
-<link rel="stylesheet" href="/signin google using js/login_google.css">
+
 </head>
 
 <style>
@@ -84,20 +84,9 @@
 
                   <div class="g-signin2" data-onsuccess="onSignIn"></div>
                   
-                  <div class="data">
-                    <p>Name</p>
-                    <p id="name"></p>
-                    <p>Image</p>
-                    <img id="image" class="rounded-circle" width="100" height="100" />
-                    <p>Email</p>
-                    <p id="email"></p>
-                    <button type="button" class="btn btn-danger" onclick="signOut();">Sign Out</button>
-			  
-			  <p>If you are not redirected in five seconds, <a href="https://www.bitdegree.org/">click here</a>.</p>
-                </div>
-			
+                 
 
-		
+
 
 
                   <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
@@ -116,26 +105,15 @@
 
       <script>
 
-        function onSignIn(googleUser) {
-          var profile = googleUser.getBasicProfile();
-          $("#name").text(profile.getName());
-          $("#email").text(profile.getEmail());
-          $("#image").attr('src', profile.getImageUrl());
-          $(".data").css("display", "block");
-          $(".g-signin2").css("display", "none");
-      }
-      
-      
-      function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-          console.log('User signed out.');
-        });
-      }
     
+ 
+    
+
+
     </script>
-      </script>
-      <script src="login.google.js"></script>
+      
+     
+    <script src="test.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://apis.google.com/js/platform.js" async defer></script>
 
